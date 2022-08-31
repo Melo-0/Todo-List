@@ -1,0 +1,273 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #EF946C;
+  color: #2F2963;
+}
+
+.header {
+  display: flex;
+  border-bottom: solid darkslateblue;
+  justify-content: space-between;
+
+  > .leftHeader {
+    display: flex;
+    font-size: 2rem;
+    gap: 5px;
+
+    img {
+      width: 50px;
+      height: auto;
+      justify-self: center;
+      margin-bottom: 15px;
+    }
+  }
+
+  > .rightHeader {
+    padding: 5px;
+
+    ul {
+      list-style: none;
+      color: #2F2963;
+
+      .high {
+        background: red;
+      }
+
+      .medium {
+        background: yellow;
+      }
+
+      .low {
+        background: cyan;
+      }
+
+    }
+
+  }
+}
+
+.container {
+  text-align: left;
+  display: flex;
+
+
+  .sidebar {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    font-size: 2rem;
+    border-right: darkslateblue solid;
+
+
+    > :first-child {
+      border-bottom: darkslateblue solid;
+
+    }
+
+    > div > .homeTitle {
+
+      margin-bottom: 15px;
+      border-radius: 15px;
+      padding: 15px;
+
+    }
+
+    > div > .projectsTitle {
+      margin-bottom: 10px;
+      border-radius: 15px;
+      padding: 15px;
+      display: flex;
+
+    }
+
+    > div > ul > li {
+      list-style: none;
+      border-radius: 15px;
+      padding: 15px;
+      font-size: 1.5rem;
+
+    }
+
+  }
+
+  .rightPanel {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .projectContent {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5rem;
+    padding: 5px;
+    gap: 5px;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      border: solid gray;
+      border-radius: 15px;
+      padding: 15px;
+
+      .projectName {
+
+        border: solid darkcyan;
+        border-radius: 15px;
+        padding: 5px;
+      }
+
+      img {
+        width: 20px;
+        height: auto;
+        justify-self: center;
+      }
+
+    }
+  }
+
+  .taskContent {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5rem;
+    padding: 5px;
+    gap: 5px;
+
+    > div {
+
+      display: grid;
+      grid-template-columns: .1fr 1fr 1fr .5fr .1fr .1fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      padding: 15px;
+      word-break: break-all;
+      border: solid gray;
+      border-radius: 15px;
+
+      > div {
+        padding: 15px;
+      }
+
+      .description {
+        font-size: .7rem;
+      }
+
+      .priority {
+        border-radius: 15px;
+        justify-self: center;
+        padding: 5px;
+      }
+
+      .taskCompleted {
+        border-radius: 35px;
+        border: solid white 1px;
+        padding: 15px;
+        justify-self: end;
+        font-size: 1rem;
+      }
+
+      img {
+        width: 15px;
+        height: auto;
+        justify-self: center;
+      }
+    }
+  }
+
+  .addTask, .addProject {
+    border-radius: 15px;
+    border: darkcyan solid;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    > img {
+      width: 15px;
+      height: auto;
+      margin-right: 10px;
+
+
+    }
+
+  }
+
+
+}
+
+.projectForm,
+.taskForm {
+  > h3 {
+
+    position: absolute;
+    right: 1rem;
+
+    cursor: pointer;
+
+  }
+
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: darkcyan;
+  border-radius: 15px;
+  padding: 15px;
+  width: 35rem;
+  color: white;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+
+    input, select, textarea {
+      border: 0;
+      padding: 5px;
+
+    }
+
+    label {
+      padding-top: 9px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    textarea {
+      resize: none;
+
+    }
+
+    input[type="submit"] {
+      margin-top: 15px;
+      background: none;
+      color: inherit;
+      border: solid white;
+      border-radius: 15px;
+      align-self: center;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+
+  }
+}
+
