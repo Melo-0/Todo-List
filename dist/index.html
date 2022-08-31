@@ -2,32 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Todo List</title>
-    <script src="main.js"> </script>
+    <script src="main.js" defer></script>
 </head>
 <body>
 <header class="header">
-    <img src="" alt="logo">
-    <h3>To-Do List</h3>
+    <div class="leftHeader">
+        <img src="./images/todoList.png" alt="logo">
+        <h3>To-Do List</h3>
+    </div>
+    <div class="rightHeader">
+        <h6>Priority Level</h6>
+        <ul>
+            <li class="high">High</li>
+            <li class="medium">Medium</li>
+            <li class="low">Low</li>
+        </ul>
+    </div>
 </header>
 <section class="container">
     <nav class="sidebar">
-        <div class="toDoLists">
+        <div class="home">
+            <div class="homeTitle">Home</div>
+        </div>
+
+        <div class="projects">
+            <div class="projectsTitle">Projects
+
+            </div>
             <ul>
-                <li class="home">Home</li>
-                <li class="today">Today</li>
-                <li class="week">Upcoming</li>
+
+
             </ul>
         </div>
-        <div class="projects">
-            Projects
 
-        </div>
     </nav>
-    <section class="mainContent">
+    <section class="rightPanel">
 
 
+        <section class="taskContent">
+
+
+        </section>
+        <div class="addTask">Add new task
+            <img src="./images/add.svg" alt="add">
+        </div>
     </section>
+</section>
+<section class="taskForm">
+    <h3>x</h3>
+    <form id="taskNameForm">
+        <h3>New Task</h3>
+        <label for="taskName">Task Name:</label>
+        <input type="text" name="taskName" id="taskName" placeholder="Task Name" required>
+
+        <label for="taskDueDate">Due Date:</label>
+        <input type="date" name="taskDueDate" id="taskDueDate" required>
+
+        <label for="taskPriority">Priority:</label>
+        <select name="taskPriority" id="taskPriority">
+            <option value=3>Low</option>
+            <option value=2>Medium</option>
+            <option value=1>High</option>
+        </select>
+
+        <label for="taskDescription">Description:</label>
+        <textarea name="taskDescription" id="taskDescription" cols="30" rows="6" placeholder="Description"></textarea>
+
+        <input type="submit" id="taskSubmit" value="Submit">
+
+    </form>
+</section>
+<section class="projectForm">
+    <h3>x</h3>
+    <form id="projectNameForm">
+        <h3>New Project</h3>
+        <label for="projectName">Project Name:</label>
+        <input type="text" name="projectName" id="projectName" maxlength="60" placeholder="project Name" required>
+
+
+        <input type="submit" id="projectSubmit" value="Submit">
+
+    </form>
 </section>
 </body>
 </html>
